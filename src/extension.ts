@@ -16,6 +16,11 @@ export function activate(context: vscode.ExtensionContext) {
             await vscode.commands.executeCommand('notebook.fold', { index: i });
         }
         
+        // Ensure the first cell is selected after folding
+        if (cellCount > 0) {
+            activeNotebook.selections = [new vscode.NotebookRange(0, 1)];
+        }
+        
         vscode.window.showInformationMessage(`Folded ${cellCount} cells`);
     });
 
@@ -29,6 +34,11 @@ export function activate(context: vscode.ExtensionContext) {
 
         const notebook = activeNotebook.notebook;
         const cellCount = notebook.cellCount;
+        
+        // Ensure a cell is selected before unfolding
+        if (cellCount > 0 && activeNotebook.selections.length === 0) {
+            activeNotebook.selections = [new vscode.NotebookRange(0, 1)];
+        }
         
         for (let i = 0; i < cellCount; i++) {
             await vscode.commands.executeCommand('notebook.unfold', { index: i });

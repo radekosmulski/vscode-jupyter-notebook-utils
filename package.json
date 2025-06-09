@@ -2,7 +2,7 @@
   "name": "vscode-jupyter-notebook-utils",
   "displayName": "Jupyter Notebook Utils",
   "description": "Utilities for working with Jupyter notebooks in VS Code - fold/unfold all cells",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "publisher": "radek-osmulski",
   "repository": {
     "type": "git",
@@ -47,14 +47,14 @@
     "keybindings": [
       {
         "command": "jupyter-notebook-utils.foldAllCells",
-        "key": "ctrl+shift+[",
-        "mac": "cmd+shift+[",
+        "key": "ctrl+k ctrl+0",
+        "mac": "cmd+k cmd+0",
         "when": "notebookEditorFocused"
       },
       {
         "command": "jupyter-notebook-utils.unfoldAllCells",
-        "key": "ctrl+shift+]",
-        "mac": "cmd+shift+]",
+        "key": "ctrl+k ctrl+j",
+        "mac": "cmd+k cmd+j",
         "when": "notebookEditorFocused"
       }
     ]

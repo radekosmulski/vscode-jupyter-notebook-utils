@@ -18,8 +18,8 @@ Access these commands through the Command Palette (`Ctrl+Shift+P` / `Cmd+Shift+P
 
 ### Keyboard Shortcuts
 
-- **Fold All Cells**: `Ctrl+Shift+[` (Windows/Linux) / `Cmd+Shift+[` (Mac)
-- **Unfold All Cells**: `Ctrl+Shift+]` (Windows/Linux) / `Cmd+Shift+]` (Mac)
+- **Fold All Cells**: `Ctrl+K, Ctrl+0` (Windows/Linux) / `Cmd+K, Cmd+0` (Mac)
+- **Unfold All Cells**: `Ctrl+K, Ctrl+J` (Windows/Linux) / `Cmd+K, Cmd+J` (Mac)
 
 *Note: Shortcuts only work when a Jupyter notebook is focused.*
 
