@@ -30,16 +30,36 @@ Access these commands through the Command Palette (`Ctrl+Shift+P` / `Cmd+Shift+P
 
 ## Installation
 
-1. Clone this repository
-2. Install dependencies: `npm install`
-3. Compile the extension: `npm run compile`
-4. Install the extension in VS Code
+Install from the VS Code Marketplace:
+
+1. Open VS Code
+2. Go to Extensions (Ctrl+Shift+X)
+3. Search for "Jupyter Notebook Utils"
+4. Click Install
+
+Or install via command line:
+```bash
+code --install-extension radek-osmulski.vscode-jupyter-notebook-utils
+```
+
+**Marketplace Link**: [Jupyter Notebook Utils](https://marketplace.visualstudio.com/items?itemName=radek-osmulski.vscode-jupyter-notebook-utils)
 
 ## Development
 
+For development and contributing:
+
+1. Clone this repository
+2. Install dependencies: `npm install`
+3. Compile the extension: `npm run compile`
+4. Press F5 to run in Extension Development Host
+
+### Scripts
+
 - `npm run compile`: Compile TypeScript to JavaScript
 - `npm run watch`: Watch for changes and auto-compile
+- `vsce package`: Package extension as .vsix file
+- `vsce publish`: Publish to marketplace
 
 ## License
 
-MIT# vscode-jupyter-notebook-utils
+MIT

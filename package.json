@@ -1,0 +1,72 @@
+{
+  "name": "vscode-jupyter-notebook-utils",
+  "displayName": "Jupyter Notebook Utils",
+  "description": "Utilities for working with Jupyter notebooks in VS Code - fold/unfold all cells",
+  "version": "0.1.0",
+  "publisher": "radek-osmulski",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/radek-osmulski/vscode-jupyter-notebook-utils.git"
+  },
+  "homepage": "https://github.com/radek-osmulski/vscode-jupyter-notebook-utils",
+  "bugs": {
+    "url": "https://github.com/radek-osmulski/vscode-jupyter-notebook-utils/issues"
+  },
+  "engines": {
+    "vscode": "^1.74.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "keywords": [
+    "jupyter",
+    "notebook",
+    "fold",
+    "unfold",
+    "collapse",
+    "expand",
+    "cells"
+  ],
+  "activationEvents": [
+    "onNotebook:jupyter-notebook"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "jupyter-notebook-utils.foldAllCells",
+        "title": "Fold All Cells",
+        "category": "Jupyter Notebook Utils"
+      },
+      {
+        "command": "jupyter-notebook-utils.unfoldAllCells",
+        "title": "Unfold All Cells",
+        "category": "Jupyter Notebook Utils"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "jupyter-notebook-utils.foldAllCells",
+        "key": "ctrl+shift+[",
+        "mac": "cmd+shift+[",
+        "when": "notebookEditorFocused"
+      },
+      {
+        "command": "jupyter-notebook-utils.unfoldAllCells",
+        "key": "ctrl+shift+]",
+        "mac": "cmd+shift+]",
+        "when": "notebookEditorFocused"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./"
+  },
+  "devDependencies": {
+    "@types/node": "18.x",
+    "@types/vscode": "^1.74.0",
+    "typescript": "^5.1.6"
+  }
+}
